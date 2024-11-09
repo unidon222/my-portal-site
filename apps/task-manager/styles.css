@@ -1,0 +1,19 @@
+/* タスク管理ツール固有のスタイル */
+
+body {
+    background-color: #f8f9fa;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
