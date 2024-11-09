@@ -1,9 +1,11 @@
+// script.js
+
 // ゲーム関連の変数
 let currentWord = "";
 
 // ゲーム開始時に単語を選択して表示
 function startGame() {
-    if (words.length === 0) {
+    if (!words || words.length === 0) {
         document.getElementById('currentWord').textContent = "単語リストが空です。words.jsを確認してください。";
         return;
     }
@@ -26,14 +28,13 @@ document.getElementById('checkButton').addEventListener('click', function() {
 
     if (userGuess === currentWord) {
         document.getElementById('gameFeedback').textContent = "正解です！";
-        document.getElementById('gameFeedback').classList.add('correct');
+        document.getElementById('gameFeedback').classList.add('text-success');
+        // 次の単語に進む
+        setTimeout(startGame, 2000); // 2秒後に次の単語を表示
     } else {
         document.getElementById('gameFeedback').textContent = "不正解です。もう一度試してください。";
-        document.getElementById('gameFeedback').classList.add('incorrect');
+        document.getElementById('gameFeedback').classList.add('text-danger');
     }
-
-    // 次の単語に進む（オプション）
-     setTimeout(startGame, 2000); // 2秒後に次の単語を表示
 });
 
 // ページ読み込み時にゲームを開始

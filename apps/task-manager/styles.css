@@ -1,19 +1,15 @@
 /* タスク管理ツール固有のスタイル */
 
-body {
-    background-color: #f8f9fa;
+/* 背景画像の設定 */
+header {
+    background-image: url('../../assets/images/task-manager-header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+/* カードのカスタマイズ */
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
 }
