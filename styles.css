@@ -1,43 +1,23 @@
-/* 共通スタイル */
+/* カスタムスタイル */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #333333;
+/* カードのホバーエフェクト */
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
 }
 
-header, footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
+/* 画像の高さを統一 */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
 }
 
-h1, h2 {
-    color: #007BFF;
+/* フッターのスタイル */
+footer {
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 20px;
-}
-
-button {
-    background-color: #007BFF;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-}
-
-button:hover {
-    background-color: #0056b3;
+/* ヘッダーのスタイル */
+header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
